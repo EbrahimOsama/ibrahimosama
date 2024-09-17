@@ -5,142 +5,201 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ibrahim Osama - CV</title>
     <style>
+        /* General styling */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #77aaff 3px solid;
-        }
-        header h1 {
-            text-align: center;
-            text-transform: uppercase;
-            margin: 0;
-            font-size: 24px;
-        }
-        section {
-            padding: 20px;
-            background: #fff;
-            margin: 20px 0;
-        }
-        h2 {
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
             color: #333;
         }
-        ul {
-            list-style-type: none;
+
+        header {
+            background-color: #4a90e2;
+            color: #fff;
+            text-align: center;
+            padding: 50px 0;
         }
-        ul li {
-            padding: 5px 0;
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            animation: fadeInDown 1s ease-in-out;
         }
-        .skills, .languages {
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            color: #4a90e2;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #4a90e2;
+        }
+
+        .info {
+            margin-bottom: 10px;
             display: flex;
             justify-content: space-between;
         }
+
+        .info p {
+            margin: 5px 0;
+        }
+
+        .skills ul, .languages ul, .extracurricular ul, .competitions ul, .research ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+            padding: 5px;
+            background: #e9ecef;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        ul li:hover {
+            transform: scale(1.05);
+        }
+
         footer {
             text-align: center;
             padding: 20px;
-            background: #333;
+            background-color: #4a90e2;
             color: white;
-            margin-top: 20px;
+        }
+
+        /* Animation for header */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animation for the content */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Button styling */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4a90e2;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #357abd;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Ibrahim Osama - High School STEM Student</h1>
+        <h1>Ibrahim Osama - STEM Student CV</h1>
     </header>
 
     <div class="container">
         <section>
             <h2>Contact Information</h2>
-            <p><strong>Phone:</strong> +20120 573 4644</p>
-            <p><strong>Email:</strong> scientistibrahim2021@gmail.com</p>
-            <p><strong>Address:</strong> 11 Ain Shams, Cairo, Egypt</p>
+            <div class="info">
+                <p><strong>Phone:</strong> +20120 573 4644</p>
+                <p><strong>Email:</strong> scientistibrahim2021@gmail.com</p>
+                <p><strong>Location:</strong> 11 Ain Shams, Cairo, Egypt</p>
+            </div>
         </section>
 
-        <section>
+        <section class="skills">
             <h2>Skills</h2>
             <ul>
                 <li>Front End App Developer</li>
                 <li>Scientific Researcher</li>
                 <li>Problem-Solving</li>
-                <li>Active Listening</li>
                 <li>Critical Thinking</li>
-                <li>Project Management Tools</li>
+                <li>Project Management</li>
                 <li>Strong Communication</li>
             </ul>
         </section>
 
-        <section>
+        <section class="languages">
             <h2>Languages</h2>
-            <div class="languages">
-                <p><strong>English:</strong> C1</p>
-                <p><strong>French:</strong> B1</p>
-                <p><strong>German:</strong> A1</p>
-                <p><strong>Turkish:</strong> A2</p>
-                <p><strong>Arabic:</strong> Native</p>
-            </div>
-        </section>
-
-        <section>
-            <h2>Education</h2>
             <ul>
-                <li><strong>Sharkya STEM School:</strong> 2022 - 2025 (GPA: 3.78)</li>
-                <li><strong>Gaber Al-Ansary School:</strong> 2011 - 2021 (GPA: 4.0)</li>
+                <li><strong>English:</strong> C1</li>
+                <li><strong>French:</strong> B1</li>
+                <li><strong>German:</strong> A1</li>
+                <li><strong>Turkish:</strong> A2</li>
+                <li><strong>Arabic:</strong> Native</li>
             </ul>
         </section>
 
-        <section>
+        <section class="extracurricular">
             <h2>Extracurricular Activities</h2>
             <ul>
-                <li><strong>Researcher in Electrical Engineering (Dr. Lofti, Zagazig University):</strong> Invented electricity generation method from roads, awarded Egyptian patent.</li>
-                <li><strong>SpanUP Founder:</strong> Developed and implemented attention-enhancing app, trained 700+ students.</li>
-                <li><strong>Artist:</strong> Created 150+ portraits, Artist of the Year 2023.</li>
-                <li><strong>Scout Leader (Egyptian Air Scouts):</strong> Led 80+ Scouters, improved survival skills, ranked 1st in Cairo in 2022 and 2023.</li>
-                <li><strong>YYGS Scholar:</strong> Researched MRI improvements, awarded Best Media Member.</li>
-                <li><strong>YIRLI Participant:</strong> Led MUN debates, presented solutions for food scarcity.</li>
-                <li><strong>UWC BSF Participant:</strong> Led sustainability research with global students.</li>
-                <li><strong>Resala Charity Volunteer:</strong> Cooked for underprivileged, won "Most Committed Volunteer" award 16 times.</li>
-                <li><strong>Caregiver:</strong> Weekly care for grandmother battling Alzheimer’s.</li>
+                <li><strong>Researcher:</strong> Electrical Engineering with Dr. Lofti (Zagazig University)</li>
+                <li><strong>SpanUP Founder:</strong> Developed attention-enhancing app</li>
+                <li><strong>Artist:</strong> Created 150+ portraits</li>
+                <li><strong>Scout Leader:</strong> Led 80+ Scouters in Egyptian Air Scouts</li>
             </ul>
         </section>
 
-        <section>
+        <section class="competitions">
             <h2>Competitions</h2>
             <ul>
-                <li><strong>Biology Olympiad:</strong> Gold Medal in Cellular and Molecular Biology.</li>
-                <li><strong>EGSDC Competition:</strong> Designed moon colony for scientists, top 10 in Africa.</li>
-                <li><strong>NASA Space Apps Competition:</strong> 8th place, developed endangered species app "Aqua".</li>
-                <li><strong>ISEF:</strong> Top 15 project nationally.</li>
-                <li><strong>ISEIC:</strong> Finalist in the first stage.</li>
+                <li><strong>Biology Olympiad:</strong> Gold Medal in Cellular and Molecular Biology</li>
+                <li><strong>EGSDC Competition:</strong> Designed moon colony</li>
+                <li><strong>NASA Space Apps Competition:</strong> 8th place with "Aqua" app</li>
+            </ul>
+        </section>
+
+        <section class="research">
+            <h2>Research Projects</h2>
+            <ul>
+                <li>Research on the effect of the SpanUP app</li>
+                <li>Research on social media's impact on neuroplasticity</li>
+                <li>Water turbine efficiency project</li>
+                <li>Generating electricity from walking</li>
             </ul>
         </section>
 
         <section>
-            <h2>Research Projects</h2>
-            <ul>
-                <li>Research on the effect of the SpanUP app on attention.</li>
-                <li>Research on the impact of social media on neuroplasticity.</li>
-                <li>Engineering project: Water turbine design improvement.</li>
-                <li>Electricity generation through walking activity.</li>
-            </ul>
+            <a class="button" href="#contact">Contact Me</a>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2024 Ibrahim Osama | All rights reserved</p>
+        <p>&copy; 2024 Ibrahim Osama | All Rights Reserved</p>
     </footer>
+
 </body>
 </html>
